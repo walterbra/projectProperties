@@ -1,0 +1,17 @@
+server:
+  port: 8083
+  servlet:
+    # Tutte le chiamate saranno hostname:port/post
+    context-path: /object
+
+spring:
+  config:
+    activate:
+      on-profile: object
+  application:
+    name: msobject
+
+
+app:
+  name: object
+  items: obj1,obj2,obj3,obj4,obj5
