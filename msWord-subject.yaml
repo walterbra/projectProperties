@@ -13,4 +13,4 @@ spring:
 
 app:
   name: subject
-  items: sub1,sub2,sub3,sub4,sub5
+  items: car, dog, soccer, music, painting, mathematics, biology, geography, language, poetry, cooking, hiking, wildlife, cinema, ballet, photography, technology, fashion, wellness, yoga
