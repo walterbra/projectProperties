@@ -1,6 +1,6 @@
 # DISCOVERY YAML
 server:
-  port: 8788
+  port: 8761
 
 spring:
   application:
