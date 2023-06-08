@@ -14,4 +14,4 @@ spring:
 
 app:
   name: verb
-  items: verb1,verb2,verb3,verb4,verb5
+  items: runs, sings, dances, paints, cooks, writes, reads, codes, swims, explores, travels, hikes, photographs, designs, styles, creates, inspires, motivates, meditates, communicates
