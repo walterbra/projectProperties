@@ -1,0 +1,17 @@
+# SENTENCE YAML
+server:
+  port: 8080
+  servlet:
+    # Tutte le chiamate saranno hostname:port/post
+    context-path: /sentence
+
+eureka:
+  client:
+    service-url:
+      default-zone: localhost:8761/eureka # fa si che questo client contatti questo sever (8761) per segnalazioni
+
+spring:
+  application:
+    name: mssentence
+  openfeign:
+    enabled: true
