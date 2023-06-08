@@ -1,0 +1,50 @@
+# GATEWAY YAML
+server:
+  port: 8090
+
+eureka:
+  client:
+    service-url:
+      default-zone: localhost:8761/eureka # fa si che questo client contatti questo sever (8761) per segnalazioni
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes: # routes è  un array che contiene i riferimenti alle applicazioni
+       # nome-applicazione  (1° applicazione) 
+      - id: mssentence
+        # lb = loadbalancer 
+        uri: lb://mssentence 
+        predicates:
+          - Path=/sentence/**
+       # nome-applicazione  (2° applicazione) 
+      - id: msverb
+        # lb = loadbalancer 
+        uri: lb://msverb 
+        predicates:
+          - Path=/verb/**
+       # nome-applicazione  (3° applicazione) 
+      - id: msobject
+        # lb = loadbalancer 
+        uri: lb://msobject 
+        predicates:
+          - Path=/object/**
+       # nome-applicazione  (4° applicazione) 
+      - id: mssubject
+        # lb = loadbalancer 
+        uri: lb://mssubject 
+        predicates:
+          - Path=/mssubject/**
+          
+                     
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+        web:
+          server: trace
+
