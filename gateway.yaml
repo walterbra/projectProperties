@@ -36,7 +36,7 @@ spring:
         # lb = loadbalancer 
         uri: lb://mssubject 
         predicates:
-          - Path=/mssubject/**
+          - Path=/subject/**
           
                      
 logging:
