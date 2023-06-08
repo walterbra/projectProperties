@@ -1,3 +1,4 @@
+#YAML WORD
 server:
   port: 8081
   servlet:
@@ -15,7 +16,7 @@ app:
   name: subject
   items: sub1,sub2,sub3,sub4,sub5
 
----
+
 
 server:
   port: 8082
@@ -34,7 +35,7 @@ spring:
 app:
   name: verb
   items: verb1,verb2,verb3,verb4,verb5
----
+
 
 server:
   port: 8083
