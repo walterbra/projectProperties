@@ -1,0 +1,16 @@
+# DISCOVERY YAML
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  instance:
+    #prefer-ip-address: true
+    #hostname: localhost
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
