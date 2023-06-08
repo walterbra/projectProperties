@@ -1,0 +1,17 @@
+server:
+  port: 8082
+  servlet:
+    # Tutte le chiamate saranno hostname:port/verb
+    context-path: /verb
+
+spring:
+  config:
+    activate:
+      on-profile: verb
+  application:
+    name: msverb
+
+
+app:
+  name: verb
+  items: verb1,verb2,verb3,verb4,verb5
