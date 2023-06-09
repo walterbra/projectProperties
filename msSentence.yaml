@@ -11,6 +11,8 @@ eureka:
       default-zone: localhost:8761/eureka # fa si che questo client contatti questo sever (8761) per segnalazioni
 
 spring:
+  zipkin:
+    base-url: http://127.0.0.1:9411/
   application:
     name: mssentence
   openfeign:
